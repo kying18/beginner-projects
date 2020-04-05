@@ -1,0 +1,12 @@
+.container {
+  text-align: center;
+  border: 2px solid red;
+}
+
+.message-part-1 {
+  color: rgb(100, 0, 0);
+}
+
+.message-part-2 {
+  color: rgb(0, 0, 100);
+}
