@@ -1,4 +1,7 @@
 import math
+import random
+import time
+
 # Implementation of binary search algorithm!
 
 # Essence of binary search:
@@ -20,13 +23,13 @@ def naive_search(l, target):
     return -1
 
 def binary_search(l, target, low=None, high=None):
-    if high < low:
-        return -1
-    
     if low is None:
         low = 0
     if high is None:
         high = len(l) - 1
+
+    if high < low:
+        return -1
     # use divide and conquer to leverage the fact that our list is sorted!
     midpoint = (low + high) // 2
 
@@ -42,6 +45,28 @@ def binary_search(l, target, low=None, high=None):
         return binary_search(l, target, midpoint + 1, high)
 
 if __name__ == '__main__':
-    l = [1, 3, 7, 10, 235, 236, 11643, 239509234]
-    for target in l:
-        print(binary_search(l, target))
+    # l = [1, 3, 7, 10, 235, 236, 11643, 239509234]
+    # for target in l:
+    #     print(binary_search(l, target))
+
+    length = 10000
+    # length = 5
+    sorted_list = set()
+    while len(sorted_list) < length:
+        sorted_list.add(random.randint(-3*length, 3*length))
+    sorted_list = sorted(list(sorted_list))
+    print("Got list!")
+
+    start = time.time()
+    for target in sorted_list:
+        naive_search(sorted_list, target)
+    end = time.time()
+    print("Naive search time: ", end-start)
+
+    start = time.time()
+    for target in sorted_list:
+        binary_search(sorted_list, target)
+    end = time.time()
+    print("Binary search time: ", end-start)
+
+
