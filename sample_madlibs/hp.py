@@ -19,7 +19,7 @@ def madlib():
     spell2 = input("Spell: ")
 
 
-    madlib = "A {adj1} glow burst suddenly across the enchanted sky above them as an edge of \
+    madlib = f"A {adj1} glow burst suddenly across the enchanted sky above them as an edge of \
 dazzling sun appeared over the sill of the nearest {noun1}. The light hit both of their {body_part} \
 at the same time, so that Voldemort’s was suddenly a flaming {noun2}. Harry heard the high voice \
 shriek as he too {verb_past} his best hope to the heavens, pointing Draco’s {noun3}:\n\
@@ -35,10 +35,6 @@ caught the {noun4} in his free hand as Voldemort fell backward, arms splayed, th
 of the {adj4} {body_part2} rolling upward. Tom Riddle hit the floor with a mundane finality, his body \
 feeble and shrunken, the white hands empty, the snakelike face vacant and unknowing. Voldemort \
 was dead, {verb_past2} by his own rebounding {noun5}, and Harry stood with two wands in his hands, \
-staring down at his enemy’s {noun6}.".format(
-    adj1=adj1, noun1=noun1, body_part=body_part, noun2=noun2, verb_past=verb_past, noun3=noun3,
-    spell1=spell1, spell2=spell2, adj2=adj2, adj3=adj3, noun_plural=noun_plural, verb=verb, noun4=noun4,
-    adj4=adj4, body_part2=body_part2, noun5=noun5, noun6=noun6, verb_past2=verb_past2
-)
+staring down at his enemy’s {noun6}."
 
     print(madlib)
