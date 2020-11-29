@@ -1,3 +1,15 @@
+"""
+Very Beginner Python Project by Kylie Ying
+Madlibs using string concatenation
+
+YouTube Kylie Ying: https://www.youtube.com/ycubed 
+Twitch KylieYing: https://www.twitch.tv/kylieying 
+Twitter @kylieyying: https://twitter.com/kylieyying 
+Instagram @kylieyying: https://www.instagram.com/kylieyying/ 
+Website: https://www.kylieying.com
+Github: https://www.github.com/kying18 
+Programmer Beast Mode Spotify playlist: https://open.spotify.com/playlist/4Akns5EUb3gzmlXIdsJkPs?si=qGc4ubKRRYmPHAJAIrCxVQ 
+"""
 # # string concatenation (aka how to put strings together)
 # # suppose we want to create a string that says "subscribe to _____ "
 # youtuber = "Kylie Ying" # some string variable
