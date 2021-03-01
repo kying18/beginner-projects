@@ -1,5 +1,6 @@
-Beginner Python projects
+# Beginner projects
 https://www.youtube.com/watch?v=8ext9G7xspg
 
-01 Madlibs 1:40
-02 Guess the number 6.54
+01 MadLibs, 1.40
+02 Guess the number, 6.54
+03 Guess the number (user), 13.17
