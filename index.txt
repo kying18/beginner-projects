@@ -1,4 +1,5 @@
 # Beginner projects
+https://www.youtube.com/watch?v=8ext9G7xspg
 
 01 MadLibs, 1.40
 02 Guess the number, 6.54
