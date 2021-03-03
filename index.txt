@@ -5,3 +5,5 @@ https://www.youtube.com/watch?v=8ext9G7xspg
 02 Guess the number, 6.54
 03 Guess the number (user), 13.17
 04 Rock paper scissors, 21.14
+    That didn't teach me much.
+05 Hangman, 24.25
