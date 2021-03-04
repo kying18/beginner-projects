@@ -7,3 +7,5 @@ https://www.youtube.com/watch?v=8ext9G7xspg
 04 Rock paper scissors, 21.14
     That didn't teach me much.
 05 Hangman, 24.25
+    That was fun.
+06 Tic tac toe, 35.53
