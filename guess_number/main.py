@@ -1,4 +1,4 @@
-# Beginner projects 2 Guess number.
+# Beginner projects 2 and 3, Guess number.
 import random
 
 def guess(x):
