@@ -14,6 +14,10 @@ import random
 
 def play():
     user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+    # if user choose a random alphabet that is either r, p or s
+    if user != 'r' and user != 'p' and user 's':
+        print("please choose either r, p or s! ")
+        continue
     computer = random.choice(['r', 'p', 's'])
 
     if user == computer:
@@ -27,9 +31,10 @@ def play():
 
 def is_win(player, opponent):
     # return true if player wins
-    # r > s, s > p, p > r
-    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
-        or (player == 'p' and opponent == 'r'):
+    #       r > s, s > p, p > r
+    # po :   rs  ,  sp  ,  pr
+    po = player + opponent
+    if (po == 'rs') or (po == 'sp') or (po == 'pr'):
         return True
 
 print(play())
