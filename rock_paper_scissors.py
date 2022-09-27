@@ -13,23 +13,38 @@ Programmer Beast Mode Spotify playlist: https://open.spotify.com/playlist/4Akns5
 import random
 
 def play():
-    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+    user = is_user()
+
     computer = random.choice(['r', 'p', 's'])
 
+    print('Computer output is '+computer) #give output for computer
+
     if user == computer:
-        return 'It\'s a tie'
+        return 'tie'
 
-    # r > s, s > p, p > r
     if is_win(user, computer):
-        return 'You won!'
+        return 'You win'
+    
+    return 'You Lose !'
+    
+def is_user():
+    user = input("'r' for rock, 'p' for paper, 's' for scissors ")
+    if user != 'r' and user != 'p' and user != 's':
+        print('You input wrong key to play!!')
+        is_user()
+    return user
 
-    return 'You lost!'
-
+   
 def is_win(player, opponent):
-    # return true if player wins
-    # r > s, s > p, p > r
-    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
+    if(player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
         or (player == 'p' and opponent == 'r'):
         return True
 
 print(play())
+#play again option
+while True:
+    play1 = input('Still wanna play ? (y/n) ')
+    if play1 == 'Y' or play1 == 'y':
+        print(play())
+    elif play1 == 'N' or play1 == 'n':
+        quit()
