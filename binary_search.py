@@ -65,27 +65,37 @@ def binary_search(l, target, low=None, high=None):
         # target > l[midpoint]
         return binary_search(l, target, midpoint+1, high)
 
-if __name__=='__main__':
-    # l = [1, 3, 5, 10, 12]
-    # target = 7
-    # print(naive_search(l, target))
-    # print(binary_search(l, target))
-
-    length = 10000
-    # build a sorted list of length 10000
+def play():
+    length = int(input('Insert how much number you wanna add? ')) #input from user
     sorted_list = set()
     while len(sorted_list) < length:
         sorted_list.add(random.randint(-3*length, 3*length))
-    sorted_list = sorted(list(sorted_list))
 
+    sorted_list = sorted(list(sorted_list))
+    input_target = int(input('Insert your guess: '))
     start = time.time()
     for target in sorted_list:
         naive_search(sorted_list, target)
     end = time.time()
-    print("Naive search time: ", (end - start), "seconds")
-
+    if target == input_target:
+        print("You are right. Target is ", target)
+        print("Naive search time : ", (end - start)/length, 'second')
+    else:
+        print("You are wrong. Target is ", target)
+        print("Naive search time : ", (end - start)/length, 'second')
+              
     start = time.time()
     for target in sorted_list:
         binary_search(sorted_list, target)
     end = time.time()
-    print("Binary search time: ", (end - start), "seconds")
+    print("Binary search time : ", (end - start)/length, 'second')
+
+    #option to replay again
+    replay = input('Still wanna counting? (y/n) ')
+
+    if replay == 'Y' or replay == 'y':
+        play()
+    else:
+        quit()
+        
+play() #call function again
