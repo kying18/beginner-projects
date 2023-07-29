@@ -13,23 +13,16 @@ Programmer Beast Mode Spotify playlist: https://open.spotify.com/playlist/4Akns5
 import random
 
 def play():
-    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+    choices = {'r': 'rock', 'p': 'paper', 's': 'scissors'}
+    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n").lower()
     computer = random.choice(['r', 'p', 's'])
 
     if user == computer:
-        return 'It\'s a tie'
+        return "It's a tie!"  # If user choice matches computer choice, it's a tie
 
-    # r > s, s > p, p > r
-    if is_win(user, computer):
-        return 'You won!'
+    if (user == 'r' and computer == 's') or (user == 's' and computer == 'p') or (user == 'p' and computer == 'r'):
+        return f'You won! The computer chose {choices[computer]}.'  # Check if the user wins based on choices
 
-    return 'You lost!'
-
-def is_win(player, opponent):
-    # return true if player wins
-    # r > s, s > p, p > r
-    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') \
-        or (player == 'p' and opponent == 'r'):
-        return True
+    return f'You lost! The computer chose {choices[computer]}.'  # If the user didn't win, it's a loss
 
 print(play())
